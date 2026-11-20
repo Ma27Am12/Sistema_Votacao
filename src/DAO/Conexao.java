@@ -9,7 +9,7 @@ public class Conexao {
     private Connection connection;
 
     private Conexao() throws SQLException {
-        connection = DriverManager.getConnection("jdbc:sqlite:votacaodb.sqlite");
+        connection = DriverManager.getConnection("jdbc:sqlite:C:/Users/mathe/DataGripProjects/default/votacaodb.sqlite");
     }
 
     public static Conexao getInstance() throws SQLException{

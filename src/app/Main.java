@@ -19,10 +19,12 @@ public class Main {
             e.printStackTrace();
         }
 
+
         Usuario usuario =
                 new Usuario(0,
                         "João",
-                        "João@email.com");
+                        "João@email.com",
+                        "Joao-2026");
 
         UsuarioDAO dao = new UsuarioDAO();
 
