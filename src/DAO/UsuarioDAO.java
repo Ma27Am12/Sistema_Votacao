@@ -1,5 +1,6 @@
 package DAO;
 
+import model.Enquete;
 import model.Usuario;
 
 import java.sql.Connection;

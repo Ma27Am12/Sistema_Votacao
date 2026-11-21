@@ -3,12 +3,14 @@ package model;
 public class Voto {
     private int id;
     private int usuarioId;
-    private int opcaoid;
+    private int enqueteId;
+    private int opcaoId;
 
-    public Voto(int id, int usuarioId, int opcaoid) {
+    public Voto(int id, int usuarioId, int enqueteId, int opcaoId) {
         this.id = id;
         this.usuarioId = usuarioId;
-        this.opcaoid = opcaoid;
+        this.enqueteId = enqueteId;
+        this.opcaoId = opcaoId;
     }
 
     public int getId() {
@@ -27,11 +29,29 @@ public class Voto {
         this.usuarioId = usuarioId;
     }
 
-    public int getOpcaoid() {
-        return opcaoid;
+    public int getEnqueteId() {
+        return enqueteId;
     }
 
-    public void setOpcaoid(int opcaoid) {
-        this.opcaoid = opcaoid;
+    public void setEnqueteId(int enqueteId) {
+        this.enqueteId = enqueteId;
+    }
+
+    public int getOpcaoId() {
+        return opcaoId;
+    }
+
+    public void setOpcaoId(int opcaoid) {
+        this.opcaoId = opcaoid;
+    }
+
+    @Override
+    public String toString() {
+        return "Voto{" +
+                "id=" + id +
+                ", usuarioId=" + usuarioId +
+                ", enqueteId=" + enqueteId +
+                ", opcaoId=" + opcaoId +
+                '}';
     }
 }

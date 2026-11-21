@@ -2,12 +2,12 @@ package model;
 
 public class OpcaoVoto {
     private int id;
-    private String texto;
+    private String descricao;
     private int enqueteId;
 
-    public OpcaoVoto(int id, String texto, int enqueteId) {
+    public OpcaoVoto(int id, String descricao, int enqueteId) {
         this.id = id;
-        this.texto = texto;
+        this.descricao = descricao;
         this.enqueteId = enqueteId;
     }
 
@@ -19,12 +19,12 @@ public class OpcaoVoto {
         this.id = id;
     }
 
-    public String getTexto() {
-        return texto;
+    public String getDescricao() {
+        return descricao;
     }
 
-    public void setTexto(String texto) {
-        this.texto = texto;
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
     public int getEnqueteId() {
@@ -33,5 +33,14 @@ public class OpcaoVoto {
 
     public void setEnqueteId(int enqueteId) {
         this.enqueteId = enqueteId;
+    }
+
+    @Override
+    public String toString() {
+        return "Opcao{" +
+                "id=" + id +
+                ", descricao='" + descricao + '\'' +
+                ", enqueteId=" + enqueteId +
+                '}';
     }
 }
