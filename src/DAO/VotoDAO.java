@@ -112,4 +112,35 @@ public class VotoDAO {
             e.printStackTrace();
         }
     }
+
+    public boolean jaVotou(
+            int usuarioId,
+            int enqueteId) {
+
+        String sql =
+                "SELECT * FROM voto " +
+                        "WHERE usuario_id = ? " +
+                        "AND enquete_id = ?";
+
+        try {
+
+            Connection conn =
+                    Conexao.getInstance().getConnection();
+
+            PreparedStatement stmt =
+                    conn.prepareStatement(sql);
+
+            stmt.setInt(1, usuarioId);
+            stmt.setInt(2, enqueteId);
+
+            ResultSet rs = stmt.executeQuery();
+
+            return rs.next();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return false;
+    }
 }
