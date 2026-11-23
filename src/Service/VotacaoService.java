@@ -6,4 +6,8 @@ public interface VotacaoService {
             int enqueteId,
             int opcaoId
     );
+
+    void exibirResultados(
+            int enqueteId
+    );
 }

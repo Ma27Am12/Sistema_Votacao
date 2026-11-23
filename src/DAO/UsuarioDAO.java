@@ -109,4 +109,45 @@ public class UsuarioDAO {
             e.printStackTrace();
         }
     }
+
+    public Usuario login(
+            String email,
+            String senha
+    ) {
+
+        String sql =
+                "SELECT * FROM usuarios " +
+                        "WHERE email = ? AND senha = ?";
+
+        try {
+
+            Connection conn =
+                    Conexao.getInstance()
+                            .getConnection();
+
+            PreparedStatement stmt =
+                    conn.prepareStatement(sql);
+
+            stmt.setString(1, email);
+            stmt.setString(2, senha);
+
+            ResultSet rs =
+                    stmt.executeQuery();
+
+            if (rs.next()) {
+
+                return new Usuario(
+                        rs.getInt("id"),
+                        rs.getString("nome"),
+                        rs.getString("email"),
+                        rs.getString("senha")
+                );
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
 }

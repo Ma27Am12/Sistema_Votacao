@@ -143,4 +143,51 @@ public class VotoDAO {
 
         return false;
     }
+
+    public void exibirResultados(int enqueteId) {
+
+        String sql =
+                """
+                SELECT
+                    o.descricao,
+                    COUNT(v.id) AS total_votos
+                FROM voto v
+                JOIN opcoes o
+                    ON v.opcao_id = o.id
+                WHERE v.enquete_id = ?
+                GROUP BY o.descricao
+                ORDER BY total_votos DESC
+                """;
+
+        try {
+
+            Connection conn =
+                    Conexao.getInstance().getConnection();
+
+            PreparedStatement stmt =
+                    conn.prepareStatement(sql);
+
+            stmt.setInt(1, enqueteId);
+
+            ResultSet rs =
+                    stmt.executeQuery();
+
+            System.out.println(
+                    "\n===== RESULTADO ====="
+            );
+
+            while (rs.next()) {
+
+                System.out.println(
+                        rs.getString("descricao")
+                                + " - "
+                                + rs.getInt("total_votos")
+                                + " votos"
+                );
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

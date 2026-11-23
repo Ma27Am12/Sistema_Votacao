@@ -37,5 +37,14 @@ public class VotacaoServiceImpl implements VotacaoService{
         subject.notificar("Novo voto registrado!");
     }
 
+    @Override
+    public void exibirResultados(
+            int enqueteId
+    ) {
+
+        votoDAO.exibirResultados(
+                enqueteId
+        );
+    }
 
 }

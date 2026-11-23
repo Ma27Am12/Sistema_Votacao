@@ -37,4 +37,14 @@ public class VotacaoProxy implements VotacaoService{
                 "Voto registrado com sucesso!"
         );
     }
+
+    @Override
+    public void exibirResultados(
+            int enqueteId
+    ) {
+
+        service.exibirResultados(
+                enqueteId
+        );
+    }
 }
