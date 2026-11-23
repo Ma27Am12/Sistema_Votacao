@@ -1,5 +1,5 @@
 # Sistema de Votação Online
-## Instiuição: UNIFUCAM - Centro Universitário Mário Palmério
+## Instiuição: UNIFUCAMP - Centro Universitário Mário Palmério
 ## Curso: Ciências Da Computação
 ## Período: 4
 ## Alunos
