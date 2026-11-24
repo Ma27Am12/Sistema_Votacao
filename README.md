@@ -10,7 +10,7 @@ Lucas Gabriel Silva Martins
 Pedro Henrique Dos Reis De Melo
 
 ## Instruções para uso
-Versão java: jdk-21.0.12
+Versão java: jdk-26.0.2
 1- instale o banco sqlite.
 
 2- Na ide adicione o driver sqlite-jdbc-3.54.1.0.jar
