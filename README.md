@@ -19,6 +19,7 @@ Versão java: jdk-26.0.2
 2.1 - Como adicionar o driver pelo Intelij:
 
 Vá em file -> project structure... ou digite ctrl+Alt+shift+s
+depois em src->DAO->conexao->modifique o caminho onde o banco sqlite está guardado c:/.../Default/...
 
 Depois vá em module e, em seguida, clique em + e importe o driver.
 
